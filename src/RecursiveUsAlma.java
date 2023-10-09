@@ -12,7 +12,7 @@ public class RecursiveUsAlma {
 public static void main(String[] args) {
 //Java dilinde, taban ve üs değerleri kullanıcıdan alınan üs alma işlemini "Recursive" metot kullanarak yapan programı yazınız.
     Scanner input = new Scanner(System.in);
-    System.out.print("Taban sayıyı girin: ");
+    System.out.print("Taban sayıyı girin : ");
     double taban = input.nextDouble();
     System.out.print("Üs sayıyı girin: ");
     int us = input.nextInt();
