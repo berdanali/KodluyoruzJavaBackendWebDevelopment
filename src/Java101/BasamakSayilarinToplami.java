@@ -1,4 +1,4 @@
-// 156 *********** 1+5+6
+package Java101;// 156 *********** 1+5+6
 import java.util.Scanner;
 public class BasamakSayilarinToplami {
     public static void main(String[] args) {

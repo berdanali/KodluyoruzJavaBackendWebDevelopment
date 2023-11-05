@@ -8,7 +8,7 @@ public class DiziHarmonik {
         for(int i = 0 ; i < arr.length ; i ++){
             harmonik += (double) 1 /arr[i];
         }
-        System.out.println("Harmonik ortalama : "  + arr.length/harmonik );
+        System.out.println("Java101.Harmonik ortalama : "  + arr.length/harmonik );
 
     }
 }

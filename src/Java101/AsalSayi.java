@@ -10,7 +10,6 @@ public class AsalSayi {
                     break;
                 }
             }
-
             if (asal) {
                 System.out.print(sayi + " ");
             }

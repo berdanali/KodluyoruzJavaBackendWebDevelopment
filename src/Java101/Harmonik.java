@@ -1,3 +1,5 @@
+package Java101;
+
 import java.util.Scanner;
 public class Harmonik {
     public static void main(String[] args) {
