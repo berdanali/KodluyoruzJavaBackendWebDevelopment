@@ -1,4 +1,4 @@
-package Java101;/*
+/*
 * Eğer şifre yanlış ise kullanıcıya şifresini sıfırlayıp sıfırlamayacağını sorun,
 * eğer kullanıcı sıfırlamak isterse yeni girdiği şifrenin hatalı girdiği ve unuttuğu şifre ile aynı olmaması gerektiğini kontrol edip ,
 *  şifreler aynı ise ekrana "Şifre oluşturulamadı,

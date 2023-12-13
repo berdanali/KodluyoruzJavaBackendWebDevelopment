@@ -1,6 +1,4 @@
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 //Bir dizide tekrar eden çift sayıları bulma
 public class TekrarEdenSayi {

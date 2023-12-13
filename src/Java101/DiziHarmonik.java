@@ -1,5 +1,3 @@
-
-
 public class DiziHarmonik {
     public static void main(String[] args) {
         double harmonik =0.0;
