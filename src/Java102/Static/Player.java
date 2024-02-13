@@ -1,4 +1,4 @@
-package bir;
+package Static;
 /*
 Eğer bir sınıfa ait değişkenlerin başına "static" yazılırsa,
 o değişkenler artık sınıf değişkeni olurlar. Sınıf değişkeni olarak tanımlanan değişkenler,

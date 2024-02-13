@@ -1,4 +1,4 @@
-package bir;
+package Static;
 /*
 * Methotları static kullanmanın avantajı şu şekldir biz bir methotda bir fonksion yazıyorsak ve ona main
 * sınıfında erişmek istiyorsak onu bir nesne üzerinden çağırmamız lazım ama bizim yazdığımız fonksiyon nesneden

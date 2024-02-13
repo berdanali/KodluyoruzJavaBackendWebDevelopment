@@ -1,4 +1,4 @@
-package bir;
+package Static;
 
 public class Course {
     public String name;
