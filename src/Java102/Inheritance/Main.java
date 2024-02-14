@@ -8,17 +8,16 @@ public class Main {
 
 
 
-        //Calisan a1 = new Akademisyen("MikeTYSON" , "234344432" , "mike@gmail.com" ,"Ceng" , "Prof.Dr");          polymorphsim
+        //Akademisyen a1 = new Akademisyen("MikeTYSON" , "234344432" , "mike@gmail.com" ,"Ceng" , "Prof.Dr");          polymorphsim
         //a1.giris();
-        //a1.derseGir();  Sadece override edilmiş methotlar için polymorphsim geçerlidir
-
+        //a1.derseGir();  //Sadece override edilmiş methotlar için polymorphsim geçerlidir
 
 
 
         //Memur c1 = new Memur("Makine" , "Yapıldı" , "Kıvırcık Ali" , "5534467836" , "Kali58@gmail.com" );
         //c1.yemekhane();
-        //OgretimGorevlisi o1 = new OgretimGorevlisi("MahmutHoca" , "5536625643" ,"Mahmuth@gmail.com","Ceng", "Doç.Dr" , "9");
-        //o1.giris();
+        OgretimGorevlisi o1 = new OgretimGorevlisi("MahmutHoca" , "5536625643" ,"Mahmuth@gmail.com","Ceng", "Doç.Dr" , "9");
+        o1.giris(10);
         //Asistan a1 = new Asistan("Mehtap Ülker" , "5534452234" , "mülker@firat.edu.tr" , "ceng" , "araştırmaGörevlisi" , "6");
         //a1.quizYap();
         //labAsistani l1 = new labAsistani("Emre Güçlü" , "5545525532" ,"egüçlü@firat.edu.tr" ,"ceng" ,"Araştırma Görevlisi" , "6");

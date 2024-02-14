@@ -1,6 +1,6 @@
 package Inheritance;
 
-public class Akademisyen extends Calisan{
+public abstract class Akademisyen extends Calisan{
     private String bolum;
     private String unvan;
 
@@ -26,9 +26,7 @@ public class Akademisyen extends Calisan{
     public void setUnvan(String unvan) {
         this.unvan = unvan;
     }
-    public void derseGir(){
-        System.out.println(this.getAdsoyad() + " Derse giriş yaptı ");
-    }
+    public abstract void derseGir(String dersSaati); //abstract tanımlama
     @Override //Method Overriding yapıldı
     public void giris(){
         System.out.println(this.getAdsoyad() + " a kapısından giriş yaptı");

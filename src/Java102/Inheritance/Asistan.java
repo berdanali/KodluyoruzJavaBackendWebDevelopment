@@ -1,6 +1,6 @@
 package Inheritance;
 
-public class Asistan extends Akademisyen{
+public abstract class Asistan extends Akademisyen{
     private String ofisSaati;
 
     public Asistan(String adsoyad , String telefon, String epota, String bolum, String unvan, String ofisSaati){
