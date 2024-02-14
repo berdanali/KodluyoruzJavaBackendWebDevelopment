@@ -1,0 +1,1 @@
+![Ekran görüntüsü 2024-02-14 104706.png](..%2F..%2F..%2F..%2F..%2FPictures%2FScreenshots%2FEkran%20g%F6r%FCnt%FCs%FC%202024-02-14%20104706.png)
