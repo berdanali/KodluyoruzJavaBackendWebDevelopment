@@ -37,6 +37,13 @@ public class Calisan {
     public void giris(){
         System.out.println(this.adsoyad + " Üniversiteye giriş yaptı");
     }
+    public void giris(double girisSaat){
+        System.out.println(girisSaat + "Saatinde üniversiteye giriş yaptı ");
+    }
+    //Method Overloading yapılmıştır
+    public void giris(double girisSaati , double cikisSaati){
+        System.out.println(girisSaati + " Üniversiteye giriş yaptı ve " + cikisSaati + " Sattinde Üniversiteden çıkş yaptı");
+    }
     public void cikis(){
         System.out.println(this.adsoyad + " Üniversiteden çıkış yaptı");
     }

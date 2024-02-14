@@ -2,8 +2,8 @@ package Inheritance;
 
 public class Main {
     public static void main(String[] args) {
-        //Calisan c1 = new Calisan("BerdanAnnak" , "5547847636" , "berdab@gmail.com");
-        //c1.giris();
+        Calisan c1 = new Calisan("BerdanAnnak" , "5547847636" , "berdab@gmail.com");
+        c1.giris(10.00 , 17.00);
        // Akademisyen a1 = new Akademisyen("MikeTYSON" , "234344432" , "mike@gmail.com" ,"Ceng" , "Prof.Dr");
        // a1.derseGir();
         //Memur c1 = new Memur("Makine" , "Yapıldı" , "Kıvırcık Ali" , "5534467836" , "Kali58@gmail.com" );
