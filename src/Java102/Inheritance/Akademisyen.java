@@ -29,4 +29,8 @@ public class Akademisyen extends Calisan{
     public void derseGir(){
         System.out.println(this.getAdsoyad() + " Derse giriş yaptı ");
     }
+    @Override //Method Overriding yapıldı
+    public void giris(){
+        System.out.println(this.getAdsoyad() + " a kapısından giriş yaptı");
+    }
 }
