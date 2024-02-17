@@ -3,32 +3,58 @@ import java.util.Scanner;
 
 public class Player extends Game{
     private int damage;
-    private int healthy;
+    private int health;
     private int money;
     private String name;
+    private String charName;
     private Inventory inventory;
+    private Scanner input = new Scanner(System.in);
 
-
-    public Player(int damage, int healthy, int money, String name){
-        this.damage=damage;
-        this.healthy=healthy;
+    public Player(String name){
         this.name=name;
-        this.money=money;
     }
+
     public void selectChar(){
-        Scanner input = new Scanner(System.in);
-        System.out.println("Macara oyununa hoşgeldiniz lütfen devam etmek istediğiniz karakteri seçin");
+        GameChar[] charlist ={new Samurai(),new Archer(),new Knight()};
         System.out.println("*****************************");
-        System.out.println("1. Okçu \n" +
-                "2. Samuray \n" +
-                "3. Şövalye ");
-        int select = input.nextInt();
-        switch (select) {
-            case (1) -> System.out.println("Seçilen karekter: Okçu");
-            case (2) -> System.out.println("Seçilen karakter: Samuray");
-            case (3) -> System.out.println("Seçilen karekter: Şovalye");
-            default -> System.out.println("Lütfen geçerli bir sayı giriniz !!!");
+        for (GameChar gameChar:charlist) {
+            System.out.println(
+                    "İd : " + gameChar.getId() +
+                    " \t Karekterler : " + gameChar.getName() +
+                    " \t Hasar : " + gameChar.getDamage() +
+                    " \t Sağlık: " + gameChar.getHealth() +
+                    " \t Para : " + gameChar.getMoney());
         }
+        System.out.println("*****************************");
+        System.out.println("Lütfen devam etmek istediğiniz karakterin İD' sini seçin");
+        int selectChar = input.nextInt();
+        switch (selectChar){
+            case 1:
+                initPlayer(new Samurai());
+                break;
+            case 2:
+                initPlayer(new Archer());
+                break;
+            case 3:
+                initPlayer(new Knight());
+                break;
+
+            default:
+                initPlayer(new Samurai());
+        }
+        System.out.println(
+                " Karekter : " + this.getName() +
+                "\t Hasar : " + this.getDamage() +
+                " Sağlık : " + this.getHealth() +
+                " Para : " + this.getMoney());
+
+
+    }
+    public void initPlayer(GameChar gameChar){
+        this.setDamage(gameChar.getDamage());
+        this.setHealth(gameChar.getHealth());
+        this.setMoney(gameChar.getMoney());
+        this.setName(gameChar.getName());
     }
     public int getDamage() {
         return damage;
@@ -38,12 +64,12 @@ public class Player extends Game{
         this.damage = damage;
     }
 
-    public int getHealthy() {
-        return healthy;
+    public int getHealth() {
+        return health;
     }
 
-    public void setHealthy(int healthy) {
-        this.healthy = healthy;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public int getMoney() {
