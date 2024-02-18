@@ -8,15 +8,17 @@ public class Player extends Game{
     private String name;
     private String charName;
     private Inventory inventory;
-    private Scanner input = new Scanner(System.in);
+    private final Scanner input = new Scanner(System.in);
+
 
     public Player(String name){
         this.name=name;
+        this.inventory= new Inventory();
     }
 
     public void selectChar(){
         GameChar[] charlist ={new Samurai(),new Archer(),new Knight()};
-        System.out.println("*****************************");
+        System.out.println("------------------------------------------------------------------------------");
         for (GameChar gameChar:charlist) {
             System.out.println(
                     "İd : " + gameChar.getId() +
@@ -25,7 +27,7 @@ public class Player extends Game{
                     " \t Sağlık: " + gameChar.getHealth() +
                     " \t Para : " + gameChar.getMoney());
         }
-        System.out.println("*****************************");
+        System.out.println("------------------------------------------------------------------------------");
         System.out.println("Lütfen devam etmek istediğiniz karakterin İD' sini seçin");
         int selectChar = input.nextInt();
         switch (selectChar){
@@ -42,13 +44,20 @@ public class Player extends Game{
             default:
                 initPlayer(new Samurai());
         }
-        System.out.println(
+        /*System.out.println(
                 " Karekter : " + this.getName() +
                 "\t Hasar : " + this.getDamage() +
                 " Sağlık : " + this.getHealth() +
-                " Para : " + this.getMoney());
+                " Para : " + this.getMoney());*/
+        System.out.println("------------------------------------------------------------------------------");
 
-
+    }
+    public void printInfo(){
+        System.out.println(
+                "Silahınız : " + this.getInventory().getWeapon().getName()
+                        + " \t Hasarınız : " + this.damage
+                        + " \t Sağlığınız : " + this.health
+                        + " \t Paranız : " + this.money);
     }
     public void initPlayer(GameChar gameChar){
         this.setDamage(gameChar.getDamage());
@@ -56,8 +65,10 @@ public class Player extends Game{
         this.setMoney(gameChar.getMoney());
         this.setName(gameChar.getName());
     }
+
+
     public int getDamage() {
-        return damage;
+        return damage+this.getInventory().getWeapon().getDamage();
     }
 
     public void setDamage(int damage) {
