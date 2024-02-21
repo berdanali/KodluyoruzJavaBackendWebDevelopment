@@ -1,9 +1,9 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Player extends Game{
     private int damage;
     private int health;
+    private int defaultHealth;
     private int money;
     private String name;
     private String charName;
@@ -14,6 +14,13 @@ public class Player extends Game{
     public Player(String name){
         this.name=name;
         this.inventory= new Inventory();
+    }
+    public void initPlayer(GameChar gameChar){
+        this.setDamage(gameChar.getDamage());
+        this.setHealth(gameChar.getHealth());
+        this.setDefaultHealth(gameChar.getHealth());
+        this.setMoney(gameChar.getMoney());
+        this.setName(gameChar.getName());
     }
 
     public void selectChar(){
@@ -54,21 +61,22 @@ public class Player extends Game{
     }
     public void printInfo(){
         System.out.println(
-                "Silahınız : " + this.getInventory().getWeapon().getName()
-                        + " \t Hasarınız : " + this.damage
-                        + " \t Sağlığınız : " + this.health
-                        + " \t Paranız : " + this.money);
+                "Silahınız : " + this.getInventory().getWeapon().getName() +
+                 "\t Zırhınız : " + this.getInventory().getArmor().getName()
+                        + " \t Bloklama : " + this.getInventory().getArmor().getBlock()
+                        + " \t Hasarınız : " + this.getTotalDamage()
+                        + " \t Sağlığınız : " + this.getHealth()
+                        + " \t Paranız : " + this.getMoney());
     }
-    public void initPlayer(GameChar gameChar){
-        this.setDamage(gameChar.getDamage());
-        this.setHealth(gameChar.getHealth());
-        this.setMoney(gameChar.getMoney());
-        this.setName(gameChar.getName());
-    }
+
+
 
 
     public int getDamage() {
-        return damage+this.getInventory().getWeapon().getDamage();
+        return damage;
+    }
+    public int getTotalDamage(){
+        return damage + this.getInventory().getWeapon().getDamage();
     }
 
     public void setDamage(int damage) {
@@ -106,5 +114,23 @@ public class Player extends Game{
     public void setInventory(Inventory inventory) {
         this.inventory = inventory;
     }
+    public Weapon getWeapon(){
+        return this.getInventory().getWeapon();
+    }
 
+    public int getDefaultHealth() {
+        return defaultHealth;
+    }
+
+    public void setDefaultHealth(int defaultHealth) {
+        this.defaultHealth = defaultHealth;
+    }
+
+    public String getCharName() {
+        return charName;
+    }
+
+    public void setCharName(String charName) {
+        this.charName = charName;
+    }
 }

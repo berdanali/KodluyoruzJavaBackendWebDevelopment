@@ -6,7 +6,7 @@ public class Game {
 
     public void start(){
         Scanner input =new Scanner(System.in);
-        System.out.println("Macera oyununa hoşgeldiniz :)");
+        System.out.println("Macera oyununa hoşgeldiniz :) ");
         System.out.println("Lütfen değerli isminizi girin");
         String playerName = input.nextLine();
         Player player = new Player(playerName);
